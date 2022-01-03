@@ -8,8 +8,14 @@ using YYX.PerformanceLog;
 var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
 XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
 
-using Loger loger = new();
-Foo();
+//using Loger loger = new();
+//Foo();
+
+using (Loger loger = new())
+{
+    Foo();
+}
+
 Console.WriteLine("YYX");
 
-void Foo() => Thread.Sleep(1000);
+void Foo() => Thread.Sleep(2000);

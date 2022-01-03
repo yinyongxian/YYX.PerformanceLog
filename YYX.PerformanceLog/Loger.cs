@@ -30,9 +30,9 @@ namespace YYX.PerformanceLog
                 {
                     // TODO: dispose managed state (managed objects)
                     var endDateTime = DateTime.Now;
-                    message += Environment.NewLine + startDatetime;
-                    message += Environment.NewLine + endDateTime;
-                    message += Environment.NewLine + (endDateTime - startDatetime);
+                    message += Environment.NewLine + "Start datetime: " + startDatetime;
+                    message += Environment.NewLine + "End datetime: " + endDateTime;
+                    message += Environment.NewLine + "TimeSpan: " + (endDateTime - startDatetime);
                     message += Environment.NewLine;
                     log.Debug(message);
                 }
