@@ -8,7 +8,7 @@ using YYX.PerformanceLog;
 var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
 XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
 
-using Loger loger = new Loger();
+using Loger loger = new();
 Foo();
 Console.WriteLine("YYX");
 
